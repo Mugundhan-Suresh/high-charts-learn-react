@@ -6,6 +6,13 @@ const Charts = () => {
   const options = {
     chart: {
       type: "line",
+      backgroundColor: "yellow",
+      borderRadius: 50,
+      borderWidth: 2,
+      borderColor: "black",
+      style: {
+        fontFamily: "Arial, sans-serif",
+      },
     },
     title: {
       text: "Basic Line Chart",
