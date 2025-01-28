@@ -6,7 +6,7 @@ const Charts = () => {
   const options = {
     chart: {
       type: "line",
-      backgroundColor: "yellow",
+    //   backgroundColor: "yellow",
       borderRadius: 50,
       borderWidth: 2,
       borderColor: "black",
@@ -32,6 +32,33 @@ const Charts = () => {
         fontWeight: "800"
       }
     },
+    xAxis: {
+        title: {
+          text: "Months",
+          style: {
+            color: "#000",
+            fontSize: "24px",
+          },
+        },
+        lineColor: "red", // Axis line color
+        gridLineColor: "blue", // Grid lines color
+      },
+      yAxis: {
+        title: {
+          text: "Values",
+          style: {
+            color: "#000",
+            fontSize: "14px",
+          },
+        },
+        labels: {
+          style: {
+            color: "blue",
+            fontSize: "12px",
+          },
+        },
+        gridLineDashStyle: "Solid", // Grid line style: Dash, Dot, Solid
+      },
     series: [
       {
         name: "d1",
