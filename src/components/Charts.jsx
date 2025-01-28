@@ -15,7 +15,22 @@ const Charts = () => {
       },
     },
     title: {
-      text: "Basic Line Chart",
+      text: "Customized Chart",
+    //   verticalAlign : "bottom",
+      align: "center",
+      style: {
+        color: "blue"
+      }
+    },
+    subtitle: {
+      text: "Subtitle for customized chart",
+    //   verticalAlign: "middle",
+      align: "center",
+      y: 40,
+      style: {
+        color: "black",
+        fontWeight: "800"
+      }
     },
     series: [
       {
