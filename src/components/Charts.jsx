@@ -51,6 +51,20 @@ const Charts = () => {
         },
         lineWidth: 3, 
       }
+    },
+    tooltip: {
+      backgroundColor: "yellow",
+      borderColor: "black",
+      borderRadius: 8,
+      style: {
+        color: "#333",
+        fontSize: "12px",
+      },
+      shared: true, // Shows data for all series at the same point
+      crosshairs: true,
+      formatter: function () {
+        return `<b>${this.series.name}</b> Hello : ${this.y}`;
+      }
     }
   };
 
