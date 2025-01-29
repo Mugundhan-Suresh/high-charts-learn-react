@@ -65,7 +65,16 @@ const Charts = () => {
       formatter: function () {
         return `<b>${this.series.name}</b> Hello : ${this.y}`;
       }
-    }
+    },
+    legend: {
+      layout: "horizontal",      // Horizontal or vertical
+      align: "center",           // Align: left, center, right
+      verticalAlign: "bottom",   // Top, middle, bottom
+      itemStyle: {
+        color: "#333",
+        fontWeight: "bold",
+      },
+    },
   };
 
   return <HighchartsReact highcharts={Highcharts} options={options} />;
