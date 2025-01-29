@@ -5,7 +5,7 @@ import HighchartsReact from "highcharts-react-official";
 const Charts = () => {
   const options = {
     chart: {
-      type: "line",
+      type: "bar",
     //   backgroundColor: "yellow",
       borderRadius: 50,
       borderWidth: 2,
@@ -62,11 +62,15 @@ const Charts = () => {
     series: [
       {
         name: "d1",
-        data: [1, 6, 3, 4, 5],
+        data: [
+          { y: 10, color: "black" }, // Custom color for a single point
+          { y: 20, color: "orange" },
+          { y: 30, color: "purple" },
+        ],
       },
       {
         name: "d2",
-        data: [6,7,8,9],
+        data: [6,7,8,9,11],
       },
       {
         name: "d3",
@@ -74,6 +78,7 @@ const Charts = () => {
       },
       
     ],
+    colors: ["grey", "yellow"]
   };
 
   return <HighchartsReact highcharts={Highcharts} options={options} />;
