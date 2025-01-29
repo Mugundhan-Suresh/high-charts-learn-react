@@ -5,8 +5,7 @@ import HighchartsReact from "highcharts-react-official";
 const Charts = () => {
   const options = {
     chart: {
-      type: "bar",
-    //   backgroundColor: "yellow",
+      type: "line",
       borderRadius: 50,
       borderWidth: 2,
       borderColor: "black",
@@ -22,51 +21,10 @@ const Charts = () => {
         color: "blue"
       }
     },
-    subtitle: {
-      text: "Subtitle for customized chart",
-    //   verticalAlign: "middle",
-      align: "center",
-      y: 40,
-      style: {
-        color: "black",
-        fontWeight: "800"
-      }
-    },
-    xAxis: {
-        title: {
-          text: "Months",
-          style: {
-            color: "#000",
-            fontSize: "24px",
-          },
-        },
-        lineColor: "red", // Axis line color
-        gridLineColor: "blue", // Grid lines color
-      },
-      yAxis: {
-        title: {
-          text: "Values",
-          style: {
-            color: "#000",
-            fontSize: "14px",
-          },
-        },
-        labels: {
-          style: {
-            color: "blue",
-            fontSize: "12px",
-          },
-        },
-        gridLineDashStyle: "Solid", // Grid line style: Dash, Dot, Solid
-      },
     series: [
       {
         name: "d1",
-        data: [
-          { y: 10, color: "black" }, // Custom color for a single point
-          { y: 20, color: "orange" },
-          { y: 30, color: "purple" },
-        ],
+        data: [ 1,2,3,4,5],
       },
       {
         name: "d2",
@@ -78,7 +36,22 @@ const Charts = () => {
       },
       
     ],
-    colors: ["grey", "yellow"]
+    plotOptions: {
+      line: {
+        dataLabels: {
+          enabled: true,
+          style: {
+            // color: "blue"
+          }
+        },
+        marker: {
+          enabled: true,
+          radius: 5,
+          symbol: "circle"
+        },
+        lineWidth: 3, 
+      }
+    }
   };
 
   return <HighchartsReact highcharts={Highcharts} options={options} />;
