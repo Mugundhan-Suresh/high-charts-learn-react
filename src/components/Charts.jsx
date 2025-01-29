@@ -5,7 +5,7 @@ import HighchartsReact from "highcharts-react-official";
 const Charts = () => {
   const options = {
     chart: {
-      type: "line",
+      type: "bar",
       borderRadius: 50,
       borderWidth: 2,
       borderColor: "black",
@@ -36,22 +36,6 @@ const Charts = () => {
       },
       
     ],
-    plotOptions: {
-      line: {
-        dataLabels: {
-          enabled: true,
-          style: {
-            // color: "blue"
-          }
-        },
-        marker: {
-          enabled: true,
-          radius: 5,
-          symbol: "circle"
-        },
-        lineWidth: 3, 
-      }
-    },
     tooltip: {
       backgroundColor: "yellow",
       borderColor: "black",
@@ -75,6 +59,46 @@ const Charts = () => {
         fontWeight: "bold",
       },
     },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{y}%", // Display value with text
+          style: {
+            color: "black",
+            fontSize: "12px",
+          },
+        },
+      },
+    },    
+    // plotOptions: {
+    //   series: {
+    //     animation: true, // Disable animations
+    //   },
+    // },
+    // plotOptions: {
+    //   series: {
+    //     states: {
+    //       hover: {
+    //         enabled: true,
+    //         lineWidth: 4, // Highlighted line width
+    //       },
+    //     },
+    //   },
+    // },
+    // plotOptions: {
+    //   series: {
+    //     point: {
+    //       events: {
+    //         click: function () {
+    //           alert(`Clicked on: ${this.category}, Value: ${this.y}`);
+    //         },
+    //       },
+    //     },
+    //   },
+    
+    
+  
   };
 
   return <HighchartsReact highcharts={Highcharts} options={options} />;
