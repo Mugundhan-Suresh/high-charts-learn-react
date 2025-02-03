@@ -5,6 +5,7 @@ import './App.css'
 import CustomCharts from './components/CustomChart'
 import Charts1 from './components/Charts1'
 import InvertedBulletChart from './components/InvertedBulletChart'
+import BarChart from './components/BarChart'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,8 @@ function App() {
     <>
       <div style={{ }}>
           {/* <Charts/> */}
-          <CustomCharts/>
+          {/* <CustomCharts/> */}
+          <BarChart/>
           {/* <Charts1/> */}
           {/* <InvertedBulletChart/> */}
       </div>
