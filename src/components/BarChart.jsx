@@ -9,7 +9,8 @@ const BarChart = () => {
             type: 'bar',
         },
         title: {
-            text: 'Inverted Bullet Chart Example'
+            text: 'Inverted',
+            align: "left"
         },
         xAxis: {
             categories: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5']
@@ -18,6 +19,13 @@ const BarChart = () => {
             title: {
                 text: 'Values'
             }
+        },
+        legend: {
+            align: "right",
+            verticalAlign: "top",
+            floating: true, // Allow it to float on the chart
+            y: 0,
+            x: 0
         },
         series: [{
             name: 'd3',

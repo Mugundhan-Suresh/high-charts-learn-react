@@ -15,9 +15,9 @@ function App() {
       <div style={{ }}>
           {/* <Charts/> */}
           {/* <CustomCharts/> */}
-          <BarChart/>
+          {/* <BarChart/> */}
           {/* <Charts1/> */}
-          {/* <InvertedBulletChart/> */}
+          <InvertedBulletChart/>
       </div>
     </>
   )
